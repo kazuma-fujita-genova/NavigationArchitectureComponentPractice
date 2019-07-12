@@ -30,7 +30,6 @@ class HomeFragment : Fragment() {
         val tabLayout = view.findViewById<TabLayout>(R.id.tab_layout)
         tabLayout.setupWithViewPager(pager)
         return view
-
-        //return inflater.inflate(R.layout.fragment_home, container, false)
     }
+    
 }

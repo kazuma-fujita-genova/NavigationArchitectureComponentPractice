@@ -27,9 +27,9 @@ class RootFragment : Fragment() {
         // TODO: ログイン判定をしてnavigate出し分け
         val isLogin = true
         when(isLogin) {
-            true -> findNavController().navigate(R.id.homeFragment)
-//            false -> findNavController().navigate(R.id.topFragment)
-            false -> findNavController().navigate(R.id.notificationFragment)
+            true -> findNavController().navigate(R.id.notificationFragment)
+//            true -> findNavController().navigate(R.id.topFragment)
+            false -> findNavController().navigate(R.id.topFragment)
         }
     }
 }
