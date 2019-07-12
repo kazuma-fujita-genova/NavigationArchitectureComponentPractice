@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/rootFragment">
+
+    <fragment android:id="@+id/topFragment"
+              android:name="com.practice.zuma.navigationarchitecturecomponentpractice.TopFragment"
+              android:label="fragment_top" tools:layout="@layout/fragment_top">
+        <action android:id="@+id/action_topFragment_to_loginFragment" app:destination="@id/loginFragment"/>
+        <action android:id="@+id/action_topFragment_to_registFragment" app:destination="@id/registFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/loginFragment"
+              android:name="com.practice.zuma.navigationarchitecturecomponentpractice.LoginFragment"
+              android:label="fragment_login" tools:layout="@layout/fragment_login">
+        <action android:id="@+id/action_loginFragment_to_authFragment" app:destination="@id/authFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/registFragment"
+              android:name="com.practice.zuma.navigationarchitecturecomponentpractice.RegistFragment"
+              android:label="fragment_regist" tools:layout="@layout/fragment_regist">
+        <action android:id="@+id/action_registFragment_to_authFragment" app:destination="@id/authFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/authFragment"
+              android:name="com.practice.zuma.navigationarchitecturecomponentpractice.AuthFragment"
+              android:label="fragment_auth" tools:layout="@layout/fragment_auth"/>
+
+    <fragment android:id="@+id/homeFragment"
+              android:name="com.practice.zuma.navigationarchitecturecomponentpractice.HomeFragment"
+              android:label="fragment_home" tools:layout="@layout/fragment_home"/>
+
+    <fragment android:id="@+id/dashboardFragment"
+              android:name="com.practice.zuma.navigationarchitecturecomponentpractice.DashboardFragment"
+              android:label="fragment_dashboard" tools:layout="@layout/fragment_dashboard"/>
+
+    <fragment android:id="@+id/notificationFragment"
+              android:name="com.practice.zuma.navigationarchitecturecomponentpractice.NotificationFragment"
+              android:label="fragment_notification" tools:layout="@layout/fragment_notification"/>
+
+    <fragment android:id="@+id/rootFragment"
+              android:name="com.practice.zuma.navigationarchitecturecomponentpractice.RootFragment"
+              android:label="fragment_root">
+        <action android:id="@+id/action_rootFragment_to_topFragment" app:destination="@id/topFragment"/>
+        <action android:id="@+id/action_rootFragment_to_homeFragment" app:destination="@id/homeFragment"/>
+    </fragment>
+</navigation>
