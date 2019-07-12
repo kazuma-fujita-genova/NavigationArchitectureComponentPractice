@@ -6,6 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.viewpager.widget.ViewPager
+import com.google.android.material.tabs.TabLayout
+import kotlinx.android.synthetic.main.fragment_home.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -19,13 +22,15 @@ private const val ARG_PARAM2 = "param2"
  */
 class HomeFragment : Fragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
+        val pager = view.findViewById<ViewPager>(R.id.pager)
+        pager.adapter = TabAdapter(childFragmentManager)
+        val tabLayout = view.findViewById<TabLayout>(R.id.tab_layout)
+        tabLayout.setupWithViewPager(pager)
+        return view
+
+        //return inflater.inflate(R.layout.fragment_home, container, false)
     }
-
-
 }

@@ -25,10 +25,11 @@ class RootFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // TODO: ログイン判定をしてnavigate出し分け
-        val isLogin = false
+        val isLogin = true
         when(isLogin) {
             true -> findNavController().navigate(R.id.homeFragment)
-            false -> findNavController().navigate(R.id.topFragment)
+//            false -> findNavController().navigate(R.id.topFragment)
+            false -> findNavController().navigate(R.id.notificationFragment)
         }
     }
 }
