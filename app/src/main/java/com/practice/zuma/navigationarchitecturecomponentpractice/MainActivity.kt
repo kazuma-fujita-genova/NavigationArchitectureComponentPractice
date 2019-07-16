@@ -18,26 +18,26 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val isLogin = true
-        if (isLogin) {
-
-            bottom_nav_view.visibility = View.VISIBLE
-            // TabLayout
-            //pager.adapter = TabAdapter(supportFragmentManager)
-            //tab_layout.setupWithViewPager(pager)
-
-            val navController = findNavController(R.id.main_nav_host)
-            // ActionBarを連動させる
-//        val appBarConfiguration = AppBarConfiguration(navController.graph)
-//        setupActionBarWithNavController(navController, appBarConfiguration)
-            findViewById<BottomNavigationView>(R.id.bottom_nav_view)?.apply {
-                setupWithNavController(navController)
-            }
-        }
-        else {
-            bottom_nav_view.visibility = View.GONE
-        }
+//
+//        val isLogin = true
+//        if (isLogin) {
+//
+//            bottom_nav_view.visibility = View.VISIBLE
+//            // TabLayout
+//            //pager.adapter = TabAdapter(supportFragmentManager)
+//            //tab_layout.setupWithViewPager(pager)
+//
+//            val navController = findNavController(R.id.main_nav_host)
+//            // ActionBarを連動させる
+////        val appBarConfiguration = AppBarConfiguration(navController.graph)
+////        setupActionBarWithNavController(navController, appBarConfiguration)
+//            findViewById<BottomNavigationView>(R.id.bottom_nav_view)?.apply {
+//                setupWithNavController(navController)
+//            }
+//        }
+//        else {
+//            bottom_nav_view.visibility = View.GONE
+//        }
     }
 
     // override fun onSupportNavigateUp() = findNavController(R.id.main_nav_host).navigateUp()
