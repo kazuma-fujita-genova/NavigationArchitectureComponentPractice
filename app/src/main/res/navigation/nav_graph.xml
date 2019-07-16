@@ -37,12 +37,24 @@
 
     <fragment android:id="@+id/notificationFragment"
               android:name="com.practice.zuma.navigationarchitecturecomponentpractice.NotificationFragment"
-              android:label="fragment_notification" tools:layout="@layout/fragment_notification"/>
+              android:label="fragment_notification" tools:layout="@layout/fragment_notification">
+        <action android:id="@+id/action_notificationFragment_to_notifyDetailFragment"
+                app:destination="@id/notifyDetailFragment"
+        />
+    </fragment>
 
     <fragment android:id="@+id/rootFragment"
               android:name="com.practice.zuma.navigationarchitecturecomponentpractice.RootFragment"
               android:label="fragment_root">
         <action android:id="@+id/action_rootFragment_to_topFragment" app:destination="@id/topFragment"/>
         <action android:id="@+id/action_rootFragment_to_homeFragment" app:destination="@id/homeFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/notifyDetailFragment"
+              android:name="com.practice.zuma.navigationarchitecturecomponentpractice.NotifyDetailFragment"
+              android:label="fragment_notify_detail" tools:layout="@layout/fragment_notify_detail">
+        <argument android:name="notifyItemEntity"
+                  app:argType="com.practice.zuma.navigationarchitecturecomponentpractice.NotifyItemEntity"/>
+        <argument android:name="titleLabel" app:argType="string"/>
     </fragment>
 </navigation>

@@ -4,6 +4,9 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+// Navigation Architecture Component Safe args
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
@@ -34,8 +37,14 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     // Navigation Architecture Component
+    // implementation "androidx.navigation:navigation-fragment-ktx:2.1.0-alpha06"
     implementation "androidx.navigation:navigation-fragment-ktx:2.0.0"
     implementation "androidx.navigation:navigation-ui-ktx:2.0.0"
     // Bottom Navigation View
     implementation 'com.google.android.material:material:1.0.0'
+}
+
+// @Parcelize設定
+androidExtensions {
+    experimental = true
 }
